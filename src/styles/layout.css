@@ -1,0 +1,226 @@
+/* ============================================================
+   DIRECT VOYAGE — Layout, Spacing, Typography Utilities & Grids
+   ============================================================ */
+
+.wrap {
+  width: min(100% - (var(--gutter) * 2), var(--max));
+  margin-inline: auto;
+}
+
+section {
+  padding: var(--sec) 0;
+  position: relative;
+}
+
+/* Rendering performance: skips layout & paint for offscreen sections */
+section:not(.hero) {
+  content-visibility: auto;
+  contain-intrinsic-size: auto 900px;
+}
+
+.center {
+  text-align: center;
+}
+
+.gold {
+  color: var(--gold-text);
+}
+
+/* Gradient gold display text with shine */
+.shine {
+  background: var(--g-gold-text);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+}
+
+/* Section eyebrow with gold horizontal rules */
+.eyebrow {
+  font-size: .68rem;
+  font-weight: 700;
+  letter-spacing: var(--tracking-eyebrow);
+  text-transform: uppercase;
+  color: var(--gold-text);
+  margin: 0 0 18px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.eyebrow::before {
+  content: "";
+  width: 28px;
+  height: 1px;
+  background: currentColor;
+  opacity: .7;
+  flex: none;
+}
+
+.center .eyebrow {
+  justify-content: center;
+}
+
+.center .eyebrow::after {
+  content: "";
+  width: 28px;
+  height: 1px;
+  background: currentColor;
+  opacity: .7;
+  flex: none;
+}
+
+.lead {
+  color: var(--muted);
+  font-size: var(--fs-lead);
+  max-width: 62ch;
+  line-height: 1.72;
+}
+
+.center .lead {
+  margin-inline: auto;
+}
+
+.h-xl {
+  font-size: var(--fs-h2);
+}
+
+.h-lg {
+  font-size: clamp(1.7rem, 3.1vw, 2.5rem);
+}
+
+.h-md {
+  font-size: clamp(1.3rem, 2.2vw, 1.8rem);
+}
+
+.sec-head {
+  max-width: 760px;
+}
+
+.center .sec-head {
+  margin-inline: auto;
+}
+
+.mt-sm { margin-top: clamp(16px, 2vw, 24px); }
+.mt-md { margin-top: clamp(24px, 3.5vw, 40px); }
+.mt-lg { margin-top: clamp(44px, 5.4vw, 70px); }
+.mt-xl { margin-top: clamp(50px, 7vw, 84px); }
+
+.num {
+  font-variant-numeric: tabular-nums;
+  font-feature-settings: "tnum" 1;
+}
+
+/* Gold dashed compass flight divider */
+.divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  padding: 0;
+  opacity: .7;
+}
+
+.divider::before,
+.divider::after {
+  content: "";
+  height: 1px;
+  flex: 1;
+  max-width: 220px;
+  background: repeating-linear-gradient(90deg, var(--gold) 0 6px, transparent 6px 14px);
+}
+
+.divider svg {
+  width: 20px;
+  height: 20px;
+  stroke: var(--gold);
+  fill: none;
+  stroke-width: 1.3;
+  flex: none;
+}
+
+/* Card Grids */
+.cards {
+  display: grid;
+  gap: clamp(20px, 2.5vw, 32px);
+}
+
+.cards.c2 {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.cards.c3 {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.cards.c4 {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.grid-2 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: clamp(16px, 2vw, 24px);
+}
+
+.grid-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: clamp(16px, 2vw, 24px);
+}
+
+@media (max-width: 1024px) {
+  .cards.c4 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .cards.c3 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .cards.c4,
+  .cards.c3,
+  .cards.c2,
+  .grid-2,
+  .grid-3 {
+    grid-template-columns: 1fr;
+  }
+}
+
+.fineprint {
+  font-size: 0.85rem;
+  color: var(--faint);
+  max-width: 70ch;
+}
+
+.light .fineprint {
+  color: var(--faint-light);
+}
+
+.link-arrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--gold);
+  font-weight: 600;
+  transition: transform var(--transition-fast);
+}
+
+.light .link-arrow {
+  color: var(--gold-deep);
+}
+
+.link-arrow svg {
+  width: 16px;
+  height: 16px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2;
+  transition: transform var(--transition-fast);
+}
+
+.link-arrow:hover svg {
+  transform: translateX(4px);
+}

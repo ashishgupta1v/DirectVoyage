@@ -1,0 +1,134 @@
+const fs = require('fs');
+const mono = fs.readFileSync('scratch/monolith.css', 'utf8');
+
+// Extract all keyframes and animation classes
+let animCss = `/* ============================================================
+   DIRECT VOYAGE — Keyframe Animations & Micro-Interactions
+   ============================================================ */
+
+/* Scroll reveal utilities */
+.rv {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.75s var(--ease), transform 0.75s var(--ease);
+  will-change: opacity, transform;
+}
+
+.rv.in {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.stagger > * {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.65s var(--ease), transform 0.65s var(--ease);
+}
+
+.stagger.in > *:nth-child(1) { transition-delay: 0.05s; opacity: 1; transform: none; }
+.stagger.in > *:nth-child(2) { transition-delay: 0.12s; opacity: 1; transform: none; }
+.stagger.in > *:nth-child(3) { transition-delay: 0.19s; opacity: 1; transform: none; }
+.stagger.in > *:nth-child(4) { transition-delay: 0.26s; opacity: 1; transform: none; }
+.stagger.in > *:nth-child(5) { transition-delay: 0.33s; opacity: 1; transform: none; }
+.stagger.in > *:nth-child(6) { transition-delay: 0.40s; opacity: 1; transform: none; }
+.stagger.in > *:nth-child(7) { transition-delay: 0.47s; opacity: 1; transform: none; }
+.stagger.in > *:nth-child(8) { transition-delay: 0.54s; opacity: 1; transform: none; }
+
+/* Sheen sweep on buttons */
+@keyframes sheen {
+  to { left: 140%; }
+}
+
+/* Spinner */
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+/* Pulsing indicators */
+@keyframes pulse {
+  0%, 100% { opacity: 0.6; transform: scale(1); }
+  50% { opacity: 1; transform: scale(1.08); }
+}
+
+/* Aurora drift */
+@keyframes drift {
+  to { transform: translate3d(6vw, -4vh, 0) scale(1.16); }
+}
+
+/* Stardust twinkle */
+@keyframes twinkle {
+  0%, 100% { opacity: 0.12; transform: scale(0.8); }
+  50% { opacity: 0.95; transform: scale(1.25); }
+}
+
+/* Glowing Sun */
+@keyframes sunPulse {
+  0%, 100% { opacity: 0.75; transform: scale(1); }
+  50% { opacity: 1; transform: scale(1.06); }
+}
+
+/* Compass watermark rotation */
+@keyframes rotate {
+  to { transform: rotate(360deg); }
+}
+
+/* Flight path airplane trajectory */
+@keyframes fly {
+  from { offset-distance: 0%; }
+  to { offset-distance: 100%; }
+}
+
+/* Headline staggered line reveal */
+@keyframes riseIn {
+  from { transform: translateY(105%); }
+  to { transform: none; }
+}
+
+/* Gold headline underline draw */
+@keyframes underline {
+  to { width: 100%; }
+}
+
+/* Scroll cue indicator */
+@keyframes cue {
+  0%, 100% { transform: translateY(0); opacity: 0.35; }
+  50% { transform: translateY(6px); opacity: 0.9; }
+}
+
+/* Trust strip marquee continuous slide */
+@keyframes slide {
+  to { transform: translate3d(-50%, 0, 0); }
+}
+
+/* Interactive route map dash flows */
+@keyframes legFlow {
+  to { stroke-dashoffset: -32; }
+}
+
+@keyframes nodePulse {
+  0%, 100% { transform: scale(1); opacity: 0.9; }
+  50% { transform: scale(1.24); opacity: 1; }
+}
+
+/* WhatsApp action pulse */
+@keyframes ring {
+  0% { opacity: 0.6; transform: scale(1); }
+  70%, 100% { opacity: 0; transform: scale(1.28); }
+}
+
+@keyframes revealUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .rv, .stagger > * {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+}
+`;
+
+fs.writeFileSync('src/styles/animations.css', animCss);
+console.log('Wrote src/styles/animations.css, length:', animCss.length);

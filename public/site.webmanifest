@@ -1,0 +1,16 @@
+{
+  "name": "Direct Voyage",
+  "short_name": "DirectVoyage",
+  "description": "International Destination Management Company with its own fleet across Singapore, Bali, Vietnam, Thailand and Dubai.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0A2540",
+  "theme_color": "#0A2540",
+  "icons": [
+    {
+      "src": "/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
