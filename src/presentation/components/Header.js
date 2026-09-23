@@ -6,7 +6,7 @@ export function Header() {
     <div class="topline">
       <div class="tl-left">
         <a href="tel:+919888181890">+91 98881 81890</a>
-        <a href="mailto:thedirectvoyage@gmail.com">thedirectvoyage@gmail.com</a>
+        <a href="mailto:help@directvoyage.in">help@directvoyage.in</a>
         <span>Singapore · Bali · Vietnam · Thailand · Dubai</span>
       </div>
       <div class="tl-right"><span class="dot" aria-hidden="true"></span> Open today · 9 AM – 9 PM IST</div>
@@ -80,7 +80,7 @@ export function Header() {
   <a class="btn btn-gold" href="/planner">Plan My Trip</a>
   <div class="drawer-foot">
     <a href="tel:+919888181890">+91 98881 81890</a>
-    <a href="mailto:thedirectvoyage@gmail.com">thedirectvoyage@gmail.com</a>
+    <a href="mailto:help@directvoyage.in">help@directvoyage.in</a>
     <span>Mon–Sun · 9 AM – 9 PM IST</span>
   </div>
 </nav>

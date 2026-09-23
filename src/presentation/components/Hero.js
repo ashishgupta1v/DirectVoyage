@@ -139,7 +139,7 @@ export function Hero() {
 
       <output class="form-alert" id="quickAlert">
         <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg>
-        <span><b>Thank you!</b>We've opened WhatsApp with your details. Didn't open? <a href="mailto:thedirectvoyage@gmail.com">Email us instead</a>.</span>
+        <span><b>Thank you!</b>We've opened WhatsApp with your details. Didn't open? <a href="mailto:help@directvoyage.in">Email us instead</a>.</span>
       </output>
 
       <form class="js-wa" data-context="Quick Quote" data-alert="quickAlert" novalidate>

@@ -16,7 +16,7 @@ export function BookingSection() {
         </li>
         <li>
           <div class="ico">${Icon('mail', { size: 20 })}</div>
-          <div><b>Email</b><a href="mailto:thedirectvoyage@gmail.com">thedirectvoyage@gmail.com</a></div>
+          <div><b>Email</b><a href="mailto:help@directvoyage.in">help@directvoyage.in</a></div>
         </li>
         <li>
           <div class="ico">${Icon('instagram', { size: 20 })}</div>
@@ -42,7 +42,7 @@ export function BookingSection() {
 
       <output class="form-alert" id="bookAlert">
         <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg>
-        <span><b>Enquiry ready!</b>We've opened WhatsApp with your details. Didn't open? <a href="mailto:thedirectvoyage@gmail.com">Email us instead</a>.</span>
+        <span><b>Enquiry ready!</b>We've opened WhatsApp with your details. Didn't open? <a href="mailto:help@directvoyage.in">Email us instead</a>.</span>
       </output>
 
       <form class="js-wa" data-context="Custom Quote" data-alert="bookAlert" novalidate>
@@ -120,7 +120,7 @@ export function BookingSection() {
           ${Icon('whatsapp', { size: 18 })}
           <span>Send via WhatsApp</span>
         </button>
-        <p class="form-note">Prefer email? <a href="mailto:thedirectvoyage@gmail.com">thedirectvoyage@gmail.com</a> · We reply within one working day.</p>
+        <p class="form-note">Prefer email? <a href="mailto:help@directvoyage.in">help@directvoyage.in</a> · We reply within one working day.</p>
       </form>
     </div>
   </div>

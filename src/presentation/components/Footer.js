@@ -156,7 +156,7 @@ export function Footer() {
       <div class="socials">
         <a href="https://instagram.com/directvoyage" target="_blank" rel="noopener" aria-label="Instagram">${Icon('instagram', { size: 18 })}</a>
         <a href="https://wa.me/919888181890" target="_blank" rel="noopener" aria-label="WhatsApp">${Icon('whatsapp', { size: 18 })}</a>
-        <a href="mailto:thedirectvoyage@gmail.com" aria-label="Email">${Icon('mail', { size: 18 })}</a>
+        <a href="mailto:help@directvoyage.in" aria-label="Email">${Icon('mail', { size: 18 })}</a>
         <a href="tel:+919888181890" aria-label="Call">${Icon('phone', { size: 18 })}</a>
       </div>
     </div>
@@ -188,7 +188,7 @@ export function Footer() {
       <h3>Get In Touch</h3>
       <ul>
         <li><a href="tel:+919888181890">+91 98881 81890</a></li>
-        <li><a href="mailto:thedirectvoyage@gmail.com">thedirectvoyage@gmail.com</a></li>
+        <li><a href="mailto:help@directvoyage.in">help@directvoyage.in</a></li>
         <li><a href="https://instagram.com/directvoyage" target="_blank" rel="noopener">@directvoyage</a></li>
         <li><a href="/planner">Request a quote</a></li>
         <li><a href="/faq">FAQ</a></li>
