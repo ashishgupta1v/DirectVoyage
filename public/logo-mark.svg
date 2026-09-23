@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="512" height="512">
+  <defs>
+    <radialGradient id="markGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#C9A24B" stop-opacity="0.25"/>
+      <stop offset="100%" stop-color="#C9A24B" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <circle cx="32" cy="32" r="31" fill="url(#markGlow)"/>
+  <g class="bm-bezel">
+    <circle cx="32" cy="32" r="30.2" fill="none" stroke="#C9A24B" stroke-width="1" opacity=".7"/>
+    <circle cx="32" cy="32" r="24.6" fill="none" stroke="#C9A24B" stroke-width=".7" opacity=".4"/>
+    <path stroke="#C9A24B" stroke-width="1.1" opacity=".75" stroke-linecap="round" fill="none"
+      d="M32 6.2V2.8M44.9 9.65 46.6 6.71M54.34 19.1 57.29 17.4M57.8 32H61.2M54.34 44.9 57.29 46.6M44.9 54.34 46.6 57.29M32 57.8V61.2M19.1 54.34 17.4 57.29M9.66 44.9 6.71 46.6M6.2 32H2.8M9.66 19.1 6.71 17.4M19.1 9.66 17.4 6.71"/>
+  </g>
+  <g class="bm-star">
+    <g fill="#C9A24B" opacity=".5">
+      <path d="M42.25 21.75 32 27.6 32 32 36.4 32Z"/><path d="M42.25 42.25 36.4 32 32 32 32 36.4Z"/>
+      <path d="M21.75 42.25 32 36.4 32 32 27.6 32Z"/><path d="M21.75 21.75 27.6 32 32 32 32 27.6Z"/>
+    </g>
+    <g fill="#F7E7BE">
+      <path d="M32 9 27.62 27.62 32 32Z"/><path d="M55 32 36.38 27.62 32 32Z"/>
+      <path d="M32 55 36.38 36.38 32 32Z"/><path d="M9 32 27.62 36.38 32 32Z"/>
+    </g>
+    <g fill="#BC8A31">
+      <path d="M32 9 32 32 36.38 27.62Z"/><path d="M55 32 32 32 36.38 36.38Z"/>
+      <path d="M32 55 32 32 27.62 36.38Z"/><path d="M9 32 32 32 27.62 27.62Z"/>
+    </g>
+  </g>
+  <circle cx="32" cy="32" r="3.8" fill="#0A2540"/>
+  <circle cx="32" cy="32" r="3.8" fill="none" stroke="#F7E7BE" stroke-width=".9"/>
+</svg>
